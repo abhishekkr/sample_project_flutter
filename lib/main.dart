@@ -1,18 +1,20 @@
-import 'package:flutter/material.dart';     // creates a material app
+import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
-void main() => runApp(MyApp());             // main method uses arrow notation; for one-liner function
+void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {       // app extgends StatelessWidget, making the app itself a widget
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
     return MaterialApp(
-      title: 'Fluttr',
+      title: 'fluttr',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Fluttr-ing'),
+          title: Text('Fluttr-ing'),
         ),
-        body: const Center(
-          child: const Text('Hey Flocks'),
+        body: Center(
+          child: Text(wordPair.asPascalCase),
         ),
       ),
     );

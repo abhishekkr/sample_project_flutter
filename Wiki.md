@@ -21,3 +21,37 @@
 * `flutter format <filename>`
 
 ---
+
+### Use an external package
+
+* can find opensource flutter packages at [pub.dev](https://pub.dev/flutter)
+
+* use external package [english_words](https://pub.dartlang.org/packages/english_words) providing few thousands of most used english language words with some utility functions
+
+* to add an external packages add something like `pubspec.yaml` file
+
+```
+dependencies:
+  english_words: ^3.1.5
+```
+
+* to fetch `flutter packages get`
+
+* following changes to MaterialApp for random word as body
+
+```
++    final wordPair = WordPair.random();
+     return MaterialApp(
+
+-          title: const Text('Fluttr-ing'),
++          title: Text('Fluttr-ing'),
+
+-        body: const Center(
+-          child: const Text('Hey Flocks'),
++        body: Center(
++          child: Text(wordPair.asPascalCase),
+```
+
+
+
+---
