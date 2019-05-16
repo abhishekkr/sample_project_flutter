@@ -52,6 +52,19 @@ dependencies:
 +          child: Text(wordPair.asPascalCase),
 ```
 
+---
+
+### Add a Stateful Widget
+
+* stateless widgets are immutable
+
+* stateful widgets require 2 classes; `StatefulWidget` class to create an instance of `State` class
+
+* here we'll add a stateful widget `RandomWords` with state class as `RandomWordsState`
+
+> * `State<RandomWords>` indicates use of generic [State](https://docs.flutter.io/flutter/widgets/State-class.html) class specialized for `RandomWords` state.
+>
+> * `RandomWordsState` needs a build method to generate the data
 
 
 ---
