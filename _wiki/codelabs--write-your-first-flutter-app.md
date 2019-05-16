@@ -27,7 +27,7 @@
 
 #### Creating an inital flutter app
 
-* create a new flutter app using `flutter new <app_name>`
+* create a new flutter app using `flutter create <app_name>`
 
 * core of app code resides at `./lib/main.dart`
 

@@ -1,19 +1,17 @@
 # sample_project_flutter
 
-A new Flutter project `fluttr`.
+Here we'll work on a sample flutter project `fluttr`.
 
-## Getting Started
+Follow different tutorials and update it with the learnings.
 
-This project is a starting point for a Flutter application.
+### Tutorials followed
 
-A few resources to get you started if this is your first Flutter project:
+* [Codelabs: First Flutter App Part-1 and Part-2](./_wiki/codelabs--write-your-first-flutter-app.md)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> * to see final result for part-1 `git checkout d1edc08f337f62eb3666c60c9dcd4f214f2f3963`
+>
+> * for final result of part-2 `git checkout b34942a9b9a1e17440480b1251c32298474b7535`
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
 
 ---
 
