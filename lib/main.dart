@@ -47,8 +47,8 @@ class RandomWordsState extends State<RandomWords> {
         color: alreadyFavorite ? Colors.blue : null,
       ),
       onTap: () {
-        setState( () {
-          alreadyFavorite ? _favorite.remove(pair) : _favorite.add(pair)
+        setState(() {
+          alreadyFavorite ? _favorite.remove(pair) : _favorite.add(pair);
         });
       },
     );
@@ -59,8 +59,49 @@ class RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Fluttr-ing'),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.list), onPressed: _pushFavorited)
+        ],
       ),
       body: _buildSuggestions(),
+    );
+  }
+
+  void _pushFavorited() {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (BuildContext context) {
+          return _favoriteScaffold(context);
+        },
+      ),
+    );
+  }
+
+  Widget _favoriteScaffold(BuildContext context) {
+    final List<Widget> favorites = _favoriteList(context);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Favorites'),
+      ),
+      body: ListView(children: favorites),
+    );
+  }
+
+  List<Widget> _favoriteList(BuildContext context) {
+    final Iterable<ListTile> tiles = _favoriteTiles();
+    return ListTile.divideTiles(context: context, tiles: tiles).toList();
+  }
+
+  Iterable<ListTile> _favoriteTiles() {
+    return _favorite.map(
+      (WordPair pair) {
+        return ListTile(
+          title: Text(
+            pair.asPascalCase,
+            style: _biggerFont,
+          ),
+        );
+      },
     );
   }
 }

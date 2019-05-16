@@ -133,7 +133,11 @@ dependencies:
 
 #### Navigate to new screen
 
-> WIP
+* in Flutter, navigator manages stack containing app's routes and routing gets managed via push/pop
+
+* add a list icon to AppBar widget for `onPressed` action calling `_pushFavorited`
+
+* `_pushFavorited` will push the route to Navigator stack, it provides scaffold to builder via `_favoriteScaffold`
 
 ---
 
