@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
 
 class RandomWordsState extends State<RandomWords> {
   final List<WordPair> _suggestions = <WordPair>[];
+  final Set<WordPair> _favorite = Set<WordPair>();
   final TextStyle _biggerFont = const TextStyle(fontSize: 18);
 
   Widget _buildSuggestions() {
@@ -34,10 +35,15 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
+    final bool alreadyFavorite = _favorite.contains(pair);
     return ListTile(
       title: Text(
         pair.asPascalCase,
         style: _biggerFont,
+      ),
+      trailing: Icon(
+        alreadyFavorite ? Icons.favorite : Icons.favorite_border,
+        color: alreadyFavorite ? Colors.blue : null,
       ),
     );
   }
