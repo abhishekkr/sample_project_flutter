@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(FluttrApp());
 
-class MyApp extends StatelessWidget {
+class FluttrApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'fluttr',
+      theme: ThemeData(
+        primaryColor: Colors.red,
+      ),
       home: RandomWords(),
     );
   }
@@ -44,7 +47,7 @@ class RandomWordsState extends State<RandomWords> {
       ),
       trailing: Icon(
         alreadyFavorite ? Icons.favorite : Icons.favorite_border,
-        color: alreadyFavorite ? Colors.blue : null,
+        color: alreadyFavorite ? Colors.orange : null,
       ),
       onTap: () {
         setState(() {

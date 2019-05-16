@@ -143,7 +143,9 @@ dependencies:
 
 #### Use UI themes
 
-> WIP
+* can use device dependent theme or a brand custom theme by configuring `ThemeData` class
+
+* customize app's primary color to red (also chang favorite color to orange to match)
 
 ---
 ---
