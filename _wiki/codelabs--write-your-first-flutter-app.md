@@ -127,7 +127,7 @@ dependencies:
 
 #### Add interactivity
 
-> WIP
+* make favorite action working by calling `setState()` from `_buildRow` at `onTap` event
 
 ---
 

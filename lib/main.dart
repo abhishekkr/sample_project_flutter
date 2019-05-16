@@ -36,6 +36,7 @@ class RandomWordsState extends State<RandomWords> {
 
   Widget _buildRow(WordPair pair) {
     final bool alreadyFavorite = _favorite.contains(pair);
+
     return ListTile(
       title: Text(
         pair.asPascalCase,
@@ -45,6 +46,11 @@ class RandomWordsState extends State<RandomWords> {
         alreadyFavorite ? Icons.favorite : Icons.favorite_border,
         color: alreadyFavorite ? Colors.blue : null,
       ),
+      onTap: () {
+        setState( () {
+          alreadyFavorite ? _favorite.remove(pair) : _favorite.add(pair)
+        });
+      },
     );
   }
 
