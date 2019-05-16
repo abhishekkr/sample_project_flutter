@@ -66,5 +66,23 @@ dependencies:
 >
 > * `RandomWordsState` needs a build method to generate the data
 
+---
+
+### Create an infinite scrolling ListView
+
+* expand `RandomWordsState` to provide a list of word-pairs, growing list inifinitely as user scrolls
+
+* `ListView` widget `builder` factory constructor allows you to build a lazy list
+
+* prefix `underscore` to identifier in Dart enforces privacy
+
+* `_buildSuggestion` uses `ListView` provided `itemBuilder`, a factory builder and callback function specified as an anon function
+
+> * itemBuilder called once per suggested word-pairing
+>
+> * add one-pixel-high divider widget before each row, every odd row
+>
+> * as items are half the list rows, `i ~/ 2` divides by 2 returning int in Dart; adding 10 more items everytime current list is over
 
 ---
+
