@@ -1,6 +1,5 @@
 name: fluttr
 description: Fluttr-ing
-
 version: 1.0.0+1
 
 environment:
@@ -12,10 +11,12 @@ dependencies:
   cupertino_icons: ^0.1.2
   english_words: ^3.1.5
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
   uses-material-design: true
+
+module:
+  androidX: true
